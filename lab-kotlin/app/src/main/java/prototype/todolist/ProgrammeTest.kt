@@ -15,20 +15,23 @@ fun main (){
 
     // Example Ajouter.
 
-    val taskrepo1 = TaskRepository()
+    val taskrepo = TaskRepository()
     val task1 = TaskEntry(0,"Task 101",1,null)
-    taskrepo1.save(task1)
+    taskrepo.save(task1)
+
 
     val task2 = TaskEntry(0,"Task 102",1,null)
-    val taskrepo2 = TaskRepository()
-    taskrepo2.save(task2)
+    taskrepo.save(task2)
+
+    task2.title = "Updated Task 102"
+    taskrepo.save(task2)
 
 
-    val taskrepo3 = TaskRepository()
+    taskrepo.delete(9)
 
-
-    for (item in taskrepo3.getAllTasks()) {
-        println(item.title)
+    val display = TaskRepository()
+    for (item in display.getAllTasks()) {
+        println("Title : ${item.title} - ID : ${item.id}  ")
     }
 
 }
