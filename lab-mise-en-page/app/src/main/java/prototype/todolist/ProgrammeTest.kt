@@ -10,6 +10,8 @@ fun main (){
     // Ajouter une tâche
     val task = TaskEntry(1,"Task 1",1,System.currentTimeMillis())
     taskRepository.save(task);
+    // afficher un tâche
+    println(taskRepository.getAllTasks())
 
     // Suprimer une tâche
 

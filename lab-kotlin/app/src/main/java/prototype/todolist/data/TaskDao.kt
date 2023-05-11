@@ -4,7 +4,8 @@ class TaskDao {
 
     companion object {
         private var task_count = 0
-        private var list_tasks : MutableList<TaskEntry> = mutableListOf<TaskEntry>()
+        // private var list_tasks : MutableList<TaskEntry> = mutableListOf<TaskEntry>()
+        private var list_tasks = mutableListOf<TaskEntry>()
 
         init {
 //            for( i in 1..10){
@@ -17,7 +18,6 @@ class TaskDao {
             }
         }
     }
-
 
     fun insert(taskEntry: TaskEntry){
         taskEntry.id = ++TaskDao.task_count
@@ -46,8 +46,7 @@ class TaskDao {
     }
 
     fun findById(id: Int) :TaskEntry {
-        val task = TaskDao.list_tasks.filter { it.id == id }.first()
-        return task
+        return TaskDao.list_tasks.filter { it.id == id }.first()
     }
 
 
