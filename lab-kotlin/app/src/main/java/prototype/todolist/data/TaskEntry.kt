@@ -8,13 +8,5 @@ data class TaskEntry (
     var title: String,
     var priority: Int,
     var timestamp: Long?
-) {
-//    override fun equals(other: Any?): Boolean {
-//     return true
-//    }
-//
-//    override fun toString(): String {
-//        return this.title
-//    }
-}
+)
 
