@@ -6,21 +6,17 @@ class TaskDao {
         private var task_count = 0
         private var list_tasks : MutableList<TaskEntry> = mutableListOf<TaskEntry>()
 
-
         init {
 //            for( i in 1..10){
 //                val task = TaskEntry(++task_count,"Task $i",1,System.currentTimeMillis())
 //                list_tasks.add(0,task)
 //            }
-
             for (i in 1..10) {
                 val task = TaskEntry(id = i, title = "Task $i", priority = 1, System.currentTimeMillis())
                 list_tasks.add(task)
             }
         }
     }
-
-
 
 
     fun insert(taskEntry: TaskEntry){
@@ -39,8 +35,9 @@ class TaskDao {
      }
 
     private fun findIndexById(id: Int): Int {
-        val index = TaskDao.list_tasks.withIndex().filter { it.value.id == id }.map{it.index}.first()
-        return index
+//        val index = TaskDao.list_tasks.withIndex().filter { it.value.id == id }.map{it.index}.first()
+//        return index
+        return TaskDao.list_tasks.indexOfFirst { it.id == id }
     }
 
 
