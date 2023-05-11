@@ -1,4 +1,4 @@
-# Projet validation : Principes de autoformation d'Android en Kotlin
+## Projet validation : Principes de autoformation d'Android en Kotlin
 - https://developer.android.com/courses/android-basics-kotlin/course?hl=fr
 <details>
 <summary>Module 1 : Principes de base du Kotlin </summary>
