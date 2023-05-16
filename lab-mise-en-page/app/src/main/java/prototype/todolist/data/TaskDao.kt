@@ -1,5 +1,7 @@
 package prototype.todolist.data
 
+import android.util.Log
+
 class TaskDao {
 
     companion object {
@@ -8,15 +10,11 @@ class TaskDao {
 
         init {
             for( i in 1..10){
-
                 val task = TaskEntry(++task_count,"Task $i",1,System.currentTimeMillis())
                 list_tasks.add(0,task)
             }
         }
     }
-
-
-
 
     fun insert(taskEntry: TaskEntry){
         taskEntry.id = ++TaskDao.task_count
@@ -38,15 +36,15 @@ class TaskDao {
         return index
     }
 
-
+// testing
     fun getAllTasks(): MutableList<TaskEntry> {
         return TaskDao.list_tasks
+        Log.d()
     }
 
     fun findById(id: Int) :TaskEntry {
         val task = TaskDao.list_tasks.filter { it.id == id }.first()
         return task
     }
-
 
 }
