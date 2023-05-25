@@ -9,7 +9,7 @@ class TasksDao {
 
     companion object{
 
-        private var BASE_URL = "http://192.168.100.146:8000/api/"
+        private var BASE_URL = "http://192.168.2.40:8000/api/"
 
         private fun getRetrofit(): Retrofit {
             return Retrofit.Builder()
